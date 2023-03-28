@@ -1,0 +1,61 @@
+<!-- {% block content %} -->
+{% csrf_token %}
+<html>
+    <head>
+        <title>
+            Flames Calculator
+        </title>
+        <link rel="stylesheet" href="join.css">
+        <script>
+            function flames(yourName, partnerName) {
+                // Convert names to lowercase and remove spaces
+                yourName = yourName.toLowerCase().replace(/\s/g, '');
+                partnerName = partnerName.toLowerCase().replace(/\s/g, '');
+                // Create an array with the letters of "flames"
+                const flames = ['Friends', 'Love', 'Affection', 'Marriage', 'Enemy', 'Siblings'];
+                let count = yourName.length + partnerName.length;
+                // Loop through each letter of your name
+                for (let i = 0; i < yourName.length; i++) {
+                  // If the partner name contains the current letter, remove it from both names
+                  if (partnerName.indexOf(yourName[i]) !== -1) {
+                    partnerName = partnerName.replace(yourName[i], '');
+                    count -= 2;
+                  }
+                }
+                // Calculate the index of the last remaining letter in the "flames" array
+                let index = (count % flames.length) - 1;
+                // Handle negative index
+                if (index < 0) {
+                  index = flames.length - 1;
+                }
+              
+                // Return the result
+                return flames[index];
+              }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>Let's Check What You And Your partner Got! </h1>
+        </div>
+        <h2>
+            <form>
+                <label for="NAME1">Male Name</label>
+                <input type="text" name="id" id="NAME1" required>
+                <label for="NAME2">Female Name</label>
+                <input type="text" name="id" id="NAME2" required>
+                <button type="button" onclick="document.getElementById('result').value = flames(document.getElementById('NAME1').value, document.getElementById('NAME2').value)">Check</button>
+                <p>result <input id="result"></p>
+            </form>
+            
+            
+        </h2>
+        <!-- <h3>
+            <form action="/app.py" method="get">
+                <label for="Result"></label> -->
+                <!-- <input type="text" name="id" id="Result" src="Flames.py">
+            </form> 
+        </h3> -->
+        </body>
+</html>
+<!-- {% end block%} --> 

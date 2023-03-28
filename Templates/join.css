@@ -1,0 +1,38 @@
+body{
+    background-image: url(images/couple-sunset-proposal-silhouette-romantic-lovers-together-3840x2160-448.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(49, 201, 221);
+    max-width: 10cap;
+}
+
+h1{
+    border: 10px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    margin-block: 35px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    text-decoration: goldenrod;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 10px;
+}
+
+h2{
+    text-align: center;
+    padding-top: 150px;
+    text-shadow: 0cqb;
+    text-decoration-color: hotpink;
+    color:white;
+    
+}
+
+h3{
+    text-align: center;
+    padding-right: 430px;
+    text-shadow: 10cap;
+    font-size: x-large;
+}
