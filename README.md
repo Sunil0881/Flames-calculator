@@ -1,4 +1,4 @@
-Flames Calculator
+Flames calculator
 The Flames Calculator is an online tool that determines the compatibility between two people based on their names. The calculator uses the acronym F.L.A.M.E.S to determine the relationship category between the two people.
 
 How to Use the Flames Calculator
